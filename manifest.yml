@@ -1,8 +1,12 @@
 applications:
-- name: redisstore
-  memory: 512M
+- name: kbredisstore
+  buildpack: java_buildpack
+  domain: cfapps.io
+  host: kbredisapp
+  memory: 1G
+  disk_quota: 1G
   instances: 1
   path: target/redisstore-1.0.1-SNAPSHOT.jar
   services:
   - myredis
-  - mydb
+  - monitor_service

@@ -58,6 +58,17 @@
     <artifactId>spring-cloud-cloudfoundry-connector</artifactId>
     <version>1.0.0.RELEASE</version>
 </dependency>
+
+<!-- Jar required to run with a java application to monitor performance. -->
+ <dependency>
+    <groupId>com.newrelic.agent.java</groupId>
+    <artifactId>newrelic-agent</artifactId>
+    <version>3.41.0</version>
+</dependency> 
+
+
+
+
 	</dependencies>
     <!-- Transitively bring in the Spring IO Platform Bill-of-Materials `pom.xml` -->    
     <dependencyManagement>
@@ -84,7 +95,6 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<start-class>io.pivotal.redisstore.Application</start-class>
 		<java.version>1.7</java.version>
-		<postgres-driver.version>9.0-801.jdbc4</postgres-driver.version>
 	</properties>
 
 	<build>
